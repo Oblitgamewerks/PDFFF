@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Operation Obliteration 2 Game Manual</title>
+    <style>
+        /* Deep, dark gaming aesthetic background */
+        body {
+            background-color: #0b0c10;
+            color: #c5c6c7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Centered container for all elements */
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        /* Title styling with a slight Olive drab green tint and subtle glow */
+        h1 {
+            color: #6b8e23; /* Olive drab green tint */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+            font-size: 2.6rem;
+            font-weight: 800;
+            line-height: 1.2; /* Adjusted line height for clean spacing across two lines */
+            /* Adjusted glow effect to complement the new green color theme */
+            text-shadow: 0 0 10px rgba(107, 142, 35, 0.5), 0 0 20px rgba(107, 142, 35, 0.2);
+        }
+
+        /* Subtitles styling - Vibrant, brighter red */
+        .subtitle {
+            font-size: 1.1rem;
+            color: #ff3333; 
+            margin: 5px 0;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        /* Tips line styling - Matches subtitle perfectly */
+        .tips {
+            font-size: 1.1rem;
+            color: #ff3333; 
+            margin-top: 5px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        /* Flashing Red Loading Text */
+        .loading-text {
+            color: #ff4d4d;
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            animation: flash 1s infinite alternate;
+        }
+
+        @keyframes flash {
+            0% { opacity: 0.2; text-shadow: 0 0 0px rgba(255, 77, 77, 0); }
+            100% { opacity: 1; text-shadow: 0 0 12px rgba(255, 77, 77, 0.8); }
+        }
+
+        /* Outer Loading Bar Container */
+        .progress-container {
+            width: 100%;
+            background-color: #1f2833;
+            border: 2px solid #ff4d4d;
+            border-radius: 4px;
+            padding: 4px;
+            box-shadow: 0 0 15px rgba(255, 77, 77, 0.2);
+            box-sizing: border-box;
+        }
+
+        /* Inner Moving Progress Bar */
+        .progress-bar {
+            width: 0%;
+            height: 20px;
+            background: linear-gradient(90deg, #ff4d4d, #ff0000);
+            border-radius: 2px;
+            /* Core fake loading trick: linear animation over 5 seconds */
+            animation: fillBar 5s linear forwards;
+        }
+
+        @keyframes fillBar {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Title & Details split cleanly into two lines -->
+        <h1>Operation Obliteration 2<br>Game Manual</h1><br>
+        <div class="subtitle">Level by level instructions, logic and lore. Free 68 Page war manual PDF online!
+         Attention Nazi Hunters: Your instruction for destruction has arrived!</div>
+     
+
+        <!-- Flashing Status Graphic -->
+        <div class="loading-text">Loading manual...</div>
+
+        <!-- Fake Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <script>
+        // After exactly 5000 milliseconds (5 seconds), redirect to the PDF
+        setTimeout(function() {
+            window.location.href = "manual.pdf";
+        }, 8000);
+    </script>
+
+<br>
+<br>
+
+
+
+</body>
+</html>
